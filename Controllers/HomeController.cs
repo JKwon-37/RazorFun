@@ -4,8 +4,8 @@ public class HomeController : Controller
 {
     [HttpGet]
     [Route("")]
-    public string Index()
+    public ViewResult Index()
     {
-        return "Hello from HomeController";
+        return View();
     }
 }

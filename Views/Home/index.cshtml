@@ -5,7 +5,30 @@
         <title>Hello!</title>
     </head>
     <body>
-        <h1>Hello ASP.NET Mvc!</h1>
+        @{
+            var KantoStarters = new List<string>
+            {
+                "Bulbasaur",
+                "Ivysaur",
+                "Venusaur",
+                "Charmander",
+                "Charmeleon",
+                "Charizard",
+                "Squirtle",
+                "Wartortle",
+                "Blastoise",
+                "Lucario"
+            };
+                
+            foreach(var pokemon in KantoStarters)
+            {
+                string style= pokemon.Contains('b') || pokemon.Contains('B') ? "color: red" : "color: black";
+                <div style="@style">
+                    <p>@pokemon</p>
+                </div>
+                <div>@style</div>
+            }
+        }
     </body>
 </html>
 
